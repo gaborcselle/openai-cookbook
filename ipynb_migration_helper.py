@@ -43,7 +43,8 @@ def reinsert_notebook_cells(directory):
                                     cell['source'] = code_file.readlines()
 
                     notebook_file.seek(0)
-                    notebook_file.write(json.dumps(notebook, indent=4))
+                    # notebooks include extra newline at the end
+                    notebook_file.write(json.dumps(notebook, indent=1) + '\n')
                     notebook_file.truncate()
 
 if __name__ == "__main__":
