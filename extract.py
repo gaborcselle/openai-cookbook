@@ -17,6 +17,6 @@ def extract_code_from_ipynb(ipynb_path, output_dir):
                 code_file.write(code)
 
 # Example usage:
-for ipynb_file in os.listdir('examples'):
+for ipynb_file in os.listdir('examples/azure'):
     if ipynb_file.endswith('.ipynb'):
-        extract_code_from_ipynb(os.path.join('examples', ipynb_file), 'examples')
+        extract_code_from_ipynb(os.path.join('examples/azure', ipynb_file), 'examples/azure')
